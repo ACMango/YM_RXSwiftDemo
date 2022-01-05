@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     enum HomeViewControllerNameType: String {
         case YMLonginVC
         case AlamofireVC
+        case CalculateVC
     }
     
     private let kCellID = "ViewController"
@@ -87,6 +88,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                 nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "YMLonginVC")
             case .AlamofireVC: // Alamofire
                 nextVC = AlamofireVC()
+            case .CalculateVC: // CalculateVC
+                 nextVC = CalculateVC()
         }
         
         guard let real_nextVC = nextVC else { return }
