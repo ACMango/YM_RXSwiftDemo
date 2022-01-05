@@ -19,6 +19,8 @@
 		B3DCFFE82779955D00D938DA /* YM_RXSwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DCFFE72779955D00D938DA /* YM_RXSwiftDemoTests.swift */; };
 		B3DCFFF22779955D00D938DA /* YM_RXSwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DCFFF12779955D00D938DA /* YM_RXSwiftDemoUITests.swift */; };
 		B3DCFFF42779955D00D938DA /* YM_RXSwiftDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DCFFF32779955D00D938DA /* YM_RXSwiftDemoUITestsLaunchTests.swift */; };
+		B3EA075727844C3200D8BEAA /* U17Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EA075627844C3200D8BEAA /* U17Model.swift */; };
+		B3EA075927844F8F00D8BEAA /* UApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EA075827844F8F00D8BEAA /* UApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		B3DCFFED2779955D00D938DA /* YM_RXSwiftDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YM_RXSwiftDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DCFFF12779955D00D938DA /* YM_RXSwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YM_RXSwiftDemoUITests.swift; sourceTree = "<group>"; };
 		B3DCFFF32779955D00D938DA /* YM_RXSwiftDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YM_RXSwiftDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B3EA075627844C3200D8BEAA /* U17Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17Model.swift; sourceTree = "<group>"; };
+		B3EA075827844F8F00D8BEAA /* UApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				B3329B5B277D931E0020A4C4 /* AlamofireVC.swift */,
+				B3EA075627844C3200D8BEAA /* U17Model.swift */,
+				B3EA075827844F8F00D8BEAA /* UApi.swift */,
 			);
 			path = Alamofire;
 			sourceTree = "<group>";
@@ -351,6 +357,8 @@
 				B3DCFFD52779955B00D938DA /* ViewController.swift in Sources */,
 				B3DC00022779C27300D938DA /* YMLonginVC.swift in Sources */,
 				B3329B5C277D931E0020A4C4 /* AlamofireVC.swift in Sources */,
+				B3EA075727844C3200D8BEAA /* U17Model.swift in Sources */,
+				B3EA075927844F8F00D8BEAA /* UApi.swift in Sources */,
 				B3DCFFD12779955B00D938DA /* AppDelegate.swift in Sources */,
 				B3DCFFD32779955B00D938DA /* SceneDelegate.swift in Sources */,
 			);
@@ -540,6 +548,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -569,6 +578,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
