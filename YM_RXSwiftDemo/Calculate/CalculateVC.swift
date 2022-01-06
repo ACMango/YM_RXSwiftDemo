@@ -14,6 +14,8 @@ class CalculateVC: UIViewController {
 
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
+        
+        calculate(number: 10)
     }
 }
 
