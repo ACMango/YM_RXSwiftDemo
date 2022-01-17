@@ -22,7 +22,12 @@ class YMLonginVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        configUI()
+//        configUI()
+        
+        usernameTF.rx.text.orEmpty.subscribe(onNext: { text in
+            print(text)
+        }).disposed(by: disposeBag)
+
     }
     
     deinit {
@@ -55,6 +60,7 @@ class YMLonginVC: UIViewController {
         
         let everythingValid = Observable.combineLatest(userNameValid, passwordValid) { $0 && $1}
         everythingValid.bind(to: loginBtn.rx.isEnabled).disposed(by: disposeBag)
+        
     }
     
 

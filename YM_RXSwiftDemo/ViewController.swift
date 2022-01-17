@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         case YMLonginVC
         case AlamofireVC
         case CalculateVC
+        case RXSwiftVC
     }
     
     private let kCellID = "ViewController"
@@ -32,7 +33,7 @@ class ViewController: UIViewController {
     }()
     
     // 外界可读属性
-    private (set) var dataArray: [HomeViewControllerNameType] = [.YMLonginVC, .AlamofireVC]
+    private (set) var dataArray: [HomeViewControllerNameType] = [.YMLonginVC, .AlamofireVC, .CalculateVC, .RXSwiftVC]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,6 +91,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                 nextVC = AlamofireVC()
             case .CalculateVC: // CalculateVC
                  nextVC = CalculateVC()
+            case .RXSwiftVC:
+                nextVC = RXSwiftVC()
         }
         
         guard let real_nextVC = nextVC else { return }
