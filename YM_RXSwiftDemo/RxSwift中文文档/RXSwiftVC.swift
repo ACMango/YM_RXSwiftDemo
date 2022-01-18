@@ -85,15 +85,14 @@ class RXSwiftVC: UIViewController {
 //            print(number)
 //        }.disposed(by: disposableBag)
 
-        let timer = Observable<Int>.timer(0, period: 2, scheduler: MainScheduler.instance).take(10)
-        timer.subscribe { number in
-            print(number)
-            
-        } onCompleted: {
-            print("finished")
-        }.disposed(by: disposableBag)
+//        let timer = Observable<Int>.timer(0, period: 2, scheduler: MainScheduler.instance).take(10)
+//        timer.subscribe { number in
+//            print(number)
+//
+//        } onCompleted: {
+//            print("finished")
+//        }.disposed(by: disposableBag)
 
-        
 //        let from = Observable.from(["one", "two", "three"])
 //        from.subscribe { text in
 //            print(text)
@@ -101,7 +100,78 @@ class RXSwiftVC: UIViewController {
 //            print("finish")
 //        }.disposed(by: disposableBag)
 
+        // merge
+//        let subject1 = PublishSubject<String>()
+//        let subject2 = PublishSubject<String>()
+//
+//        Observable.of(subject1, subject2)
+//            .merge()
+//            .subscribe { next in
+//
+//                if case let .next(text) = next {
+//
+//                    print(text)
+//                }
+//
+////                switch next {
+////                case .next(let text):
+////                    print(text)
+////                case .error(let error):
+////                    print(error.localizedDescription)
+////                case .completed:
+////                    print("结束了")
+////                }
+//            }.disposed(by: disposableBag)
+//        subject1.onNext("A")
+//        subject1.onNext("B")
+//        subject2.onNext("23")
+//        subject2.onNext("55")
         
+        // zip、combineLatest
+//        let first = PublishSubject<String>()
+//        let second = PublishSubject<String>()
+//
+//        Observable.combineLatest(first, second).subscribe { observe in
+//            if case let .next((text1, text2)) = observe {
+//                print(text1, text2)
+//            }
+//        }.disposed(by: disposableBag)
+//
+//        first.onNext("1")
+//        second.onNext("A")
+//        first.onNext("2")
+//        first.onNext("5")
+//        second.onNext("B")
+        
+        // Variable
+//        let variable = Variable("111")
+//        variable.value = "222"
+//        variable.asObservable().subscribe { observer in
+//            print("第1次订阅：\(observer)")
+//        }.disposed(by: disposableBag)
+//
+//        variable.value = "333"
+//
+//        //第2次订阅
+//        variable.asObservable().subscribe {
+//            print("第2次订阅：", $0)
+//        }.disposed(by: disposableBag)
+//        variable.value = "444"
+        
+        let disposeBag = DisposeBag()
+        let first = BehaviorSubject(value: "👦🏻")
+        let second = BehaviorSubject(value: "🅰️")
+        let variable = Variable(first)
+
+        variable.asObservable()
+                .flatMap { $0 }
+                .subscribe(onNext: { print($0) })
+                .disposed(by: disposeBag)
+
+        first.onNext("🐱")
+        variable.value = second
+        second.onNext("🅱️")
+        first.onNext("🐶")
     }
     
     
