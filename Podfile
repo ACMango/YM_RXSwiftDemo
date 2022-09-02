@@ -15,6 +15,7 @@ target 'YM_RXSwiftDemo' do
 	pod 'SnapKit', '~> 5.0.1'
 	pod 'HandyJSON', '~> 5.0.4-beta'
 	pod 'Moya', '~> 15.0.0'
+	pod 'lottie-ios'
 
 #target 'YM_RXSwiftDemoTests' do
     #inherit! :search_paths

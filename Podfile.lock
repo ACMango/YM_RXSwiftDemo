@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.5.0)
   - HandyJSON (5.0.4-beta)
+  - lottie-ios (3.4.2)
   - Moya (15.0.0):
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
@@ -16,6 +17,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.5.0)
   - HandyJSON (~> 5.0.4-beta)
+  - lottie-ios
   - Moya (~> 15.0.0)
   - RxCocoa (~> 5.0.1)
   - RxSwift (~> 5.0.1)
@@ -25,6 +27,7 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - HandyJSON
+    - lottie-ios
     - Moya
     - RxCocoa
     - RxRelay
@@ -34,12 +37,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   HandyJSON: a9c67202df97805a0ba4a00e30b50e9a30ac28f3
+  lottie-ios: 6bbc53eef6957e4744a50321507015fba72d8ca6
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 116faf0d6c3d2278bf6ea26d82a8c48e015db72a
+PODFILE CHECKSUM: 0d96813d52d9a165fc5fd7fb1065eb3bcb3f3617
 
 COCOAPODS: 1.11.2

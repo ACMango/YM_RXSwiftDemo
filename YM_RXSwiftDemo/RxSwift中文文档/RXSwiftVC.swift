@@ -158,20 +158,51 @@ class RXSwiftVC: UIViewController {
 //        }.disposed(by: disposableBag)
 //        variable.value = "444"
         
-        let disposeBag = DisposeBag()
-        let first = BehaviorSubject(value: "👦🏻")
-        let second = BehaviorSubject(value: "🅰️")
-        let variable = Variable(first)
+//        let disposeBag = DisposeBag()
+//        let first = BehaviorSubject(value: "👦🏻")
+//        let second = BehaviorSubject(value: "🅰️")
+//        let variable = Variable(first)
+//
+//        variable.asObservable()
+//                .flatMap { $0 }
+//                .subscribe(onNext: { print($0) })
+//                .disposed(by: disposeBag)
+//
+//        first.onNext("🐱")
+//        variable.value = second
+//        second.onNext("🅱️")
+//        first.onNext("🐶")
+        
+        // share
+//        let seq = PublishSubject<Int>()
+//        let ob = seq.map { i -> Int in
+//            print("map:---\(i)")
+//            return i*3
+//        }.share(replay: 1, scope: .forever)
+//
+//        let _ = ob.subscribe { num in
+//            print("第一次打印：\(num)")
+//        } onError: { error in
+//            print(error.localizedDescription)
+//        }.disposed(by: disposableBag)
+//
+//        let _ = ob.subscribe { num in
+//            print("第二次打印：\(num)")
+//        } onError: { error in
+//            print(error.localizedDescription)
+//        }.disposed(by: disposableBag)
+//
+//        seq.onNext(1)
+    
+        inputTF.rx.text.orEmpty.map { text -> String in
+            
+            print("走了\(text)")
+            return "map:\(text)"
+        }.subscribe { ob in
+            
+        }
 
-        variable.asObservable()
-                .flatMap { $0 }
-                .subscribe(onNext: { print($0) })
-                .disposed(by: disposeBag)
-
-        first.onNext("🐱")
-        variable.value = second
-        second.onNext("🅱️")
-        first.onNext("🐶")
+        
     }
     
     
